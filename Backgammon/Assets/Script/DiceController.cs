@@ -6,18 +6,18 @@ using UnityEngine.UI;
 public class DiceController : MonoBehaviour
 {
     [SerializeField]
-    GameObject Dice1;
+    private GameObject Dice1;
     [SerializeField]
-    GameObject Dice2;
+    private GameObject Dice2;
     [SerializeField]
-    GameObject CPUDice1;
+    private GameObject CPUDice1;
     [SerializeField]
-    GameObject CPUDice2;
+    private GameObject CPUDice2;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -34,5 +34,15 @@ public class DiceController : MonoBehaviour
         
         int Dice2Number = Random.Range(1, 7);
         Debug.Log(Dice2Number);
+
+
+
+        int NPCDice1Number = Random.Range(1, 7);
+        Debug.Log(NPCDice1Number);
+        
+        int NPCDice2Number = Random.Range(1, 7);
+        Debug.Log(NPCDice2Number);
+
+
     }
 }
