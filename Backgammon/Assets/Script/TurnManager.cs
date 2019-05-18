@@ -15,6 +15,8 @@ public class TurnManager : MonoBehaviour
     Text CPUTurnDice2;
     [SerializeField]
     Text FirstMessage;
+    [SerializeField]
+    GameObject BB;
 
     private int PlayerNumber = 0;
     private int NPCNumber = 0;
@@ -66,6 +68,7 @@ public class TurnManager : MonoBehaviour
             FirstMessage.text = "プレイヤーが先行です。";
             Debug.Log("プレイヤーが先行");
             before = true;
+            //Destroy(BB);
         }
         else
         {
@@ -73,6 +76,7 @@ public class TurnManager : MonoBehaviour
             FirstMessage.text = "NPCが先行です。";
             Debug.Log("NPCが先行");
             before = false;
+            //Destroy(BB);
         }
 
     }
