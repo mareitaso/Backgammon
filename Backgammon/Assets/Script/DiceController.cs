@@ -30,19 +30,14 @@ public class DiceController : MonoBehaviour
     {
         int Dice1Number = Random.Range(1, 7);
         Debug.Log(Dice1Number);
-       
-        
+               
         int Dice2Number = Random.Range(1, 7);
         Debug.Log(Dice2Number);
-
-
 
         int NPCDice1Number = Random.Range(1, 7);
         Debug.Log(NPCDice1Number);
         
         int NPCDice2Number = Random.Range(1, 7);
         Debug.Log(NPCDice2Number);
-
-
     }
 }
