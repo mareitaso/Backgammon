@@ -112,6 +112,12 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &247442970 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 131876995685467347, guid: 523e154f916d7d2428d80a64bbf9bcf1,
+    type: 3}
+  m_PrefabInstance: {fileID: 131876996319118348}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &332630659
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,7 +324,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -397,7 +403,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -505,7 +511,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1558926594}
+      - m_Target: {fileID: 1558926592}
         m_MethodName: OnClickDiceButton
         m_Mode: 1
         m_Arguments:
@@ -719,7 +725,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -798,7 +804,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -936,10 +942,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdaefa9097df22f4598076c0e71fae0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dice1: {fileID: 527587996}
-  Dice2: {fileID: 1311697327}
-  CPUDice1: {fileID: 1134343892}
-  CPUDice2: {fileID: 574518553}
+  Dice1: {fileID: 527587998}
+  Dice2: {fileID: 1311697329}
+  CPUDice1: {fileID: 1134343894}
+  CPUDice2: {fileID: 574518555}
 --- !u!4 &1558926593
 Transform:
   m_ObjectHideFlags: 0
@@ -971,7 +977,9 @@ MonoBehaviour:
   CPUTurnDice1: {fileID: 652631585}
   CPUTurnDice2: {fileID: 717777559}
   FirstMessage: {fileID: 1895916918}
+  FirstButto: {fileID: 247442970}
   BB: {fileID: 629670518}
+  before: 0
 --- !u!114 &1895916918 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 131876994960122234, guid: 523e154f916d7d2428d80a64bbf9bcf1,
@@ -1187,6 +1195,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BlackBack
+      objectReference: {fileID: 0}
+    - target: {fileID: 131876995690497658, guid: 523e154f916d7d2428d80a64bbf9bcf1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 131876995690497659, guid: 523e154f916d7d2428d80a64bbf9bcf1,
         type: 3}

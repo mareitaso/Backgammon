@@ -15,13 +15,17 @@ public class TurnManager : MonoBehaviour
     Text CPUTurnDice2;
     [SerializeField]
     Text FirstMessage;
+
+    [SerializeField]
+    GameObject FirstButto;
     [SerializeField]
     GameObject BB;
+
 
     private int PlayerNumber = 0;
     private int NPCNumber = 0;
 
-    bool before;
+    public bool before = true ;
 
     // Start is called before the first frame update
     void Start()
@@ -66,18 +70,27 @@ public class TurnManager : MonoBehaviour
         {
             //プレイヤーが先行
             FirstMessage.text = "プレイヤーが先行です。";
+            FirstButto.GetComponent<Button>().interactable = false;
             Debug.Log("プレイヤーが先行");
             before = true;
-            //Destroy(BB);
+            Invoke("Destroy", 2.5f);
         }
         else
         {
             //NPCが先行
             FirstMessage.text = "NPCが先行です。";
+            FirstButto.GetComponent<Button>().interactable = false;
             Debug.Log("NPCが先行");
             before = false;
-            //Destroy(BB);
+            Invoke("Destroy", 2.5f);
         }
 
+        Debug.Log("");
+
+    }
+
+    private void Destroy()
+    {
+        Destroy(BB);
     }
 }
