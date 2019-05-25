@@ -45,5 +45,6 @@ public class DiceController : MonoBehaviour
         CPUDice2.text = NPCDice2Number.ToString();
 
         Debug.Log("");
+
     }
 }
