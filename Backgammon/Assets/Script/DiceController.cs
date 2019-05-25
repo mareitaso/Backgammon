@@ -43,5 +43,7 @@ public class DiceController : MonoBehaviour
         int NPCDice2Number = Random.Range(1, 7);
         Debug.Log(NPCDice2Number);
         CPUDice2.text = NPCDice2Number.ToString();
+
+        Debug.Log("");
     }
 }

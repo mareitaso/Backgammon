@@ -669,6 +669,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: BlackBack
       objectReference: {fileID: 0}
+    - target: {fileID: 131876995690497658, guid: 41bed668d41dae243866bc61dda5f79d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 131876995690497659, guid: 41bed668d41dae243866bc61dda5f79d,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -707,7 +712,7 @@ PrefabInstance:
     - target: {fileID: 131876995690497659, guid: 41bed668d41dae243866bc61dda5f79d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 131876995690497659, guid: 41bed668d41dae243866bc61dda5f79d,
         type: 3}
@@ -1256,7 +1261,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1998566788
 RectTransform:
   m_ObjectHideFlags: 0
