@@ -6,23 +6,13 @@ using UnityEngine.UI;
 public class TurnManager : MonoBehaviour
 {
     [SerializeField]
-    Text TurnDice1;
-    [SerializeField]
-    Text TurnDice2;
-    [SerializeField]
-    Text CPUTurnDice1;
-    [SerializeField]
-    Text CPUTurnDice2;
-    [SerializeField]
-    Text FirstMessage;
+    private Text TurnDice1,TurnDice2,CPUTurnDice1,CPUTurnDice2,FirstMessage;
 
-    //[SerializeField]
-    
 
     [SerializeField]
-    GameObject FirstButto;
+    private GameObject FirstButto;
     [SerializeField]
-    GameObject BB;
+    private GameObject BB;
 
 
     private int PlayerNumber = 0;
