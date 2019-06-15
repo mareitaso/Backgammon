@@ -64,8 +64,10 @@ public class TurnManager : MonoBehaviour
         {
             //プレイヤーが先行
             FirstMessage.text = "プレイヤーが先行です。";
+
             //ボタンを押せなくする
             FirstButto.GetComponent<Button>().interactable = false;
+
             Debug.Log("プレイヤーが先行");
             before = true;
             Invoke("Destroy", 2.5f);
@@ -74,8 +76,10 @@ public class TurnManager : MonoBehaviour
         {
             //NPCが先行
             FirstMessage.text = "NPCが先行です。";
+
             //ボタンを押せなくする
             FirstButto.GetComponent<Button>().interactable = false;
+
             Debug.Log("NPCが先行");
             before = false;
             Invoke("Destroy", 2.5f);

@@ -16,7 +16,6 @@ public class DiceController : MonoBehaviour
     [HideInInspector]
     public bool NPCEvenNumber = false;
 
-
     // Start is called before the first frame update
     void Start()
     {
