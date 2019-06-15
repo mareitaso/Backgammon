@@ -39,9 +39,12 @@ public class PieceController : MonoBehaviour
 
             //数字を取得して進む関数
             PieceButton.GetComponent<RectTransform>().localPosition += new Vector3(MoveNumber * -50, 0, 0);
-            
-            //すべてのボタンをオンにする関数
-            DiceButtonTrue();
+
+            //すべてのボタンをオンにする関数 ←これいらないかも
+            //DiceButtonTrue();
+
+            //押し終わった後は押せないことが見た目で分かりやすくする
+
         }
 
         if (Dice2Button.GetComponent<Button>().interactable == false && MoveDice2 == true)
@@ -54,8 +57,8 @@ public class PieceController : MonoBehaviour
             //数字を取得して進む関数
             PieceButton.GetComponent<RectTransform>().localPosition += new Vector3(MoveNumber * -50, 0, 0);
 
-            //すべてのボタンをオンにする関数
-            DiceButtonTrue();
+            //すべてのボタンをオンにする関数 ←これいらないかも
+            //DiceButtonTrue();
         }
     }
 
