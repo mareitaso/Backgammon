@@ -9,12 +9,15 @@ public class DiceController : MonoBehaviour
     private Text Dice1, Dice2, CPUDice1, CPUDice2;
 
     [HideInInspector]
-    public int Dice1Number, Dice2Number, NPCDice1Number, NPCDice2Number;
+    public int Dice1Number, Dice2Number, NPCDice1Number, NPCDice2Number = 0;
 
     [HideInInspector]
     public bool EvenNumber = false;
     [HideInInspector]
     public bool NPCEvenNumber = false;
+
+    [SerializeField]
+    PieceController PieceController;
 
     // Start is called before the first frame update
     void Start()
@@ -30,6 +33,9 @@ public class DiceController : MonoBehaviour
 
     public void OnClickDiceButton()
     {
+        PieceController.MoveDice1 = true;
+        PieceController.MoveDice2 = true;
+
         Dice1Number = Random.Range(1, 7);
         Debug.Log(Dice1Number);
         Dice1.text = Dice1Number.ToString();

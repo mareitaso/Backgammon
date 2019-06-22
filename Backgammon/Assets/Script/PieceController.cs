@@ -13,14 +13,16 @@ public class PieceController : MonoBehaviour
     private int MoveNumber = 0;
 
     [SerializeField]
-    DiceController GameManager;
+    DiceController DiceController;
 
-    bool MoveDice1 = true;
-    bool MoveDice2 = true;
+    [HideInInspector]
+    public bool MoveDice1 = true;
+    [HideInInspector]
+    public bool MoveDice2 = true;
 
     void Start()
     {
-        
+
     }
 
     void Update()
@@ -33,32 +35,25 @@ public class PieceController : MonoBehaviour
         if (Dice1Button.GetComponent<Button>().interactable == false && MoveDice1 == true)
         {
             MoveDice1 = false;
+            //NumberButton1();
 
             //ここでボタンを押されたときに数を取得して、その数をMoveNumberに代入
-            MoveNumber = GameManager.Dice1Number;
+            MoveNumber = DiceController.Dice1Number;
 
             //数字を取得して進む関数
             PieceButton.GetComponent<RectTransform>().localPosition += new Vector3(MoveNumber * -50, 0, 0);
-
-            //すべてのボタンをオンにする関数 ←これいらないかも
-            //DiceButtonTrue();
-
-            //押し終わった後は押せないことが見た目で分かりやすくする
-
         }
 
         if (Dice2Button.GetComponent<Button>().interactable == false && MoveDice2 == true)
         {
             MoveDice2 = false;
+            //1NumberButton2();
 
             //ここでボタンを押されたときに数を取得して、その数をMoveNumberに代入
-            MoveNumber = GameManager.Dice2Number;
+            MoveNumber = DiceController.Dice2Number;
 
             //数字を取得して進む関数
             PieceButton.GetComponent<RectTransform>().localPosition += new Vector3(MoveNumber * -50, 0, 0);
-
-            //すべてのボタンをオンにする関数 ←これいらないかも
-            //DiceButtonTrue();
         }
     }
 
@@ -66,15 +61,34 @@ public class PieceController : MonoBehaviour
     //左の数字を押したとき
     public void NumberButton1()
     {
-        Dice1Button.GetComponent<Button>().interactable = false;
-        Dice2Button.GetComponent<Button>().interactable = true;
+        if (MoveDice1 == true)
+        {
+            Dice1Button.GetComponent<Button>().interactable = false;
+            Dice2Button.GetComponent<Button>().interactable = true;
+        }
+        else
+        if (MoveDice1 == false)
+        {
+            Dice2Button.GetComponent<Button>().interactable = false;
+            Dice1Button.GetComponent<Button>().interactable = false;
+        }
     }
 
     //右の数字を押したとき
     public void NumberButton2()
     {
-        Dice1Button.GetComponent<Button>().interactable = true;
-        Dice2Button.GetComponent<Button>().interactable = false;
+        if (MoveDice2 == true)
+        {
+            Dice1Button.GetComponent<Button>().interactable = true;
+            Dice2Button.GetComponent<Button>().interactable = false;
+        }
+        else if (MoveDice2 == false)
+        {
+            Dice1Button.GetComponent<Button>().interactable = false;
+            Dice2Button.GetComponent<Button>().interactable = false;
+        }
+
+
     }
 
     //ボタンを元に戻す

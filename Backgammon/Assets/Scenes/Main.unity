@@ -2414,12 +2414,13 @@ MonoBehaviour:
   Dice2: {fileID: 1278820176}
   CPUDice1: {fileID: 1974028295}
   CPUDice2: {fileID: 863671030}
-  Dice1Number: 763
+  Dice1Number: 0
   Dice2Number: 0
   NPCDice1Number: 0
   NPCDice2Number: 0
   EvenNumber: 0
   NPCEvenNumber: 0
+  PieceController: {fileID: 1568556155}
 --- !u!4 &1568556154
 Transform:
   m_ObjectHideFlags: 0
@@ -2449,7 +2450,9 @@ MonoBehaviour:
   Dice1Button: {fileID: 1253969297}
   Dice2Button: {fileID: 641003939}
   PieceButton: {fileID: 1059647691}
-  GameManager: {fileID: 1568556153}
+  DiceController: {fileID: 1568556153}
+  MoveDice1: 1
+  MoveDice2: 1
 --- !u!114 &1616345193 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 131876994960122234, guid: 9cfebd2639383754f98f8fa24bdf239d,
