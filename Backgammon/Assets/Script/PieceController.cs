@@ -64,13 +64,11 @@ public class PieceController : MonoBehaviour
         if (MoveDice1 == true)
         {
             Dice1Button.GetComponent<Button>().interactable = false;
-            Dice2Button.GetComponent<Button>().interactable = true;
-        }
-        else
-        if (MoveDice1 == false)
-        {
-            Dice2Button.GetComponent<Button>().interactable = false;
-            Dice1Button.GetComponent<Button>().interactable = false;
+
+            if (MoveDice2 == true)
+            {
+                Dice2Button.GetComponent<Button>().interactable = true;
+            }
         }
     }
 
@@ -79,16 +77,13 @@ public class PieceController : MonoBehaviour
     {
         if (MoveDice2 == true)
         {
-            Dice1Button.GetComponent<Button>().interactable = true;
             Dice2Button.GetComponent<Button>().interactable = false;
-        }
-        else if (MoveDice2 == false)
-        {
-            Dice1Button.GetComponent<Button>().interactable = false;
-            Dice2Button.GetComponent<Button>().interactable = false;
-        }
 
-
+            if (MoveDice1 == true)
+            {
+                Dice1Button.GetComponent<Button>().interactable = true;
+            }
+        }
     }
 
     //ボタンを元に戻す
