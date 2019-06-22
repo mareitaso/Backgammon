@@ -92,10 +92,13 @@ public class PieceController : MonoBehaviour
     }
 
     //ボタンを元に戻す
-    private void DiceButtonTrue()
+    public void DiceButtonTrue()
     {
         Dice1Button.GetComponent<Button>().interactable = true;
         Dice2Button.GetComponent<Button>().interactable = true;
+
+        MoveDice1 = true;
+        MoveDice2 = true;
     }
 
 }

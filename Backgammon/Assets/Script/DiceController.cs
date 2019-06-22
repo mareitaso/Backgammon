@@ -33,8 +33,7 @@ public class DiceController : MonoBehaviour
 
     public void OnClickDiceButton()
     {
-        PieceController.MoveDice1 = true;
-        PieceController.MoveDice2 = true;
+        PieceController.DiceButtonTrue();
 
         Dice1Number = Random.Range(1, 7);
         Debug.Log(Dice1Number);
