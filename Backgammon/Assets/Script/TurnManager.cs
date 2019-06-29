@@ -8,6 +8,7 @@ public class TurnManager : MonoBehaviour
     [SerializeField]
     private Text TurnDice1,TurnDice2,CPUTurnDice1,CPUTurnDice2,FirstMessage;
 
+    private int Dice1Number, Dice2Number, NPCDice1Number, NPCDice2Number = 0;
 
     [SerializeField]
     private GameObject FirstButto;
@@ -36,19 +37,19 @@ public class TurnManager : MonoBehaviour
 
     public void OnClickChoiceTurnButton()
     {
-        int Dice1Number = Random.Range(1, 7);
+        Dice1Number = Random.Range(1, 7);
         Debug.Log(Dice1Number);
         TurnDice1.text = Dice1Number.ToString();
 
-        int Dice2Number = Random.Range(1, 7);
+        Dice2Number = Random.Range(1, 7);
         Debug.Log(Dice2Number);
         TurnDice2.text = Dice2Number.ToString();
 
-        int NPCDice1Number = Random.Range(1, 7);
+        NPCDice1Number = Random.Range(1, 7);
         Debug.Log(NPCDice1Number);
         CPUTurnDice1.text = NPCDice1Number.ToString();
 
-        int NPCDice2Number = Random.Range(1, 7);
+        NPCDice2Number = Random.Range(1, 7);
         Debug.Log(NPCDice2Number);
         CPUTurnDice2.text = NPCDice2Number.ToString();
 
