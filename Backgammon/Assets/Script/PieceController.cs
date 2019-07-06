@@ -13,6 +13,9 @@ public class PieceController : MonoBehaviour
     private int MoveNumber = 0;
 
     [SerializeField]
+    private List<GameObject> PiecePlace = new List<GameObject>();
+
+    [SerializeField]
     DiceController DiceController;
 
     [HideInInspector]
@@ -42,6 +45,9 @@ public class PieceController : MonoBehaviour
 
             //数字を取得して進む関数
             PieceButton.GetComponent<RectTransform>().localPosition += new Vector3(MoveNumber * -50, 0, 0);
+
+            //数字を取得して進む関数更新版
+
         }
 
         if (Dice2Button.GetComponent<Button>().interactable == false && MoveDice2 == true)
@@ -53,7 +59,10 @@ public class PieceController : MonoBehaviour
             MoveNumber = DiceController.Dice2Number;
 
             //数字を取得して進む関数
-            PieceButton.GetComponent<RectTransform>().localPosition += new Vector3(MoveNumber * -50, 0, 0);
+            PieceButton.GetComponent<RectTransform>().localPosition = new Vector3(MoveNumber * -50, 0, 0);
+
+            //数字を取得して進む関数更新版
+
         }
     }
 
